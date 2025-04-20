@@ -32,7 +32,7 @@ io.on("connection", async (socket) => {
   console.log(`${username} connected`);
 
   try {
-    const messages = await Message.find().sort({ timestamp: -1 }).limit(50);
+    const messages = await Message.find().sort({ timestamp: -1 }).limit(250);
     socket.emit("history", messages.reverse());
     console.log(`Sent ${messages.length} messages to ${username}`);
 
