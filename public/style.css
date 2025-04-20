@@ -85,7 +85,7 @@ h1 {
 }
 
 .user-message {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", sans-serif, cursive;
   font-size: 1rem; /* or adjust as you like */
   font-weight: 500; /* medium boldness */
   margin-left: 5px;
@@ -171,25 +171,43 @@ h1 {
   .container {
     margin: 0.5rem;
     padding: 0.5rem;
-    height: calc(100vh - 1rem);
+    height: calc(100vh - 2.5rem);
   }
 
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
+    text-align: center;
   }
 
   .chat-area {
     padding: 0.5rem;
+    font-size: 0.95rem;
   }
 
   .chat-form {
-    flex-direction: column;
+    flex-direction: row;
+    gap: 0.5rem;
   }
 
-  .chat-form input,
+  .chat-form input {
+    flex: 1;
+    min-width: 0;
+  }
+
   .chat-form button {
-    border-radius: 5px;
-    padding: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .timestamp {
+    font-size: 0.7rem;
+  }
+
+  .username {
+    font-size: 0.85rem;
+  }
+
+  .user-message {
+    font-size: 0.95rem;
   }
 }
